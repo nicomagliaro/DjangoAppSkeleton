@@ -1,0 +1,29 @@
+<!-- Div alertas -->
+<div class="list-group">
+
+    {% if mensaje %}
+        <div class="alert alert-success" role="alert">
+          <a href="#" class="alert-link">{{mensaje}}</a>
+        </div>
+    {% endif %}
+
+    {% if info %}
+        <div class="alert alert-info" role="alert">
+          <a href="#" class="alert-link">{{info}}</a>
+        </div>
+    {% endif %}
+
+    {% if alerta %}
+        <div class="alert alert-warning" role="alert">
+          <a href="#" class="alert-link">{{alerta}}</a>
+        </div>
+    {% endif %}
+
+    {% if error %}
+        <div class="alert alert-danger" role="alert">
+          <a href="#" class="alert-link">{{error}}</a>
+        </div>
+    {% endif %}
+
+</div>
+<!-- Fin div alertas -->

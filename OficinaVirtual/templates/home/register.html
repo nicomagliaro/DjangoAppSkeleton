@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %} Registro {% endblock %}
+{% block content %}
+
+<form class="form-group" role="form" action="." method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+    {% include "form_snippet.html" %}
+    <button class="btn btn-primary" type="submit"> Registrar </button>
+    </div>
+</form>
+
+{% endblock %}

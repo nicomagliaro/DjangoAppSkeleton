@@ -1,5 +1,16 @@
 from django import forms
 from django.contrib.auth.models import User
+#from django.forms.utils import ErrorList
+
+"""
+class DivErrorList(ErrorList):
+
+        Esta clase sobrescribe el modulo ErrorList de los formularios de Django para pasarle un valor customizado
+    def __str__(self):              # __unicode__ on Python 2
+        return self.as_divs()
+    def as_divs(self):
+        if not self: return ''
+        return '<div class="alert alert-danger" role="alert">%s</div>' % (e for e in self)"""
 
 class ContactForm(forms.Form):
     Email   = forms.EmailField(widget=forms.TextInput())

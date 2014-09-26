@@ -17,6 +17,16 @@
 
     {% include "footer.html" %}
 
+    <!-- Custom JavaScript -->
+
+    {% if js %}
+        {% for s_js in js %}
+    <script src="{{ s_js }}"></script>
+        {% endfor %}
+    {% endif %}
+
+    <!-- End Custom JavaScript-->
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

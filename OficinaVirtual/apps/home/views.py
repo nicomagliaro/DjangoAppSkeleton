@@ -1,6 +1,6 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from OficinaVirtual.apps.home.forms import ContactForm, LoginForm,RegisterForm
+from OficinaVirtual.apps.home.forms import ContactForm,LoginForm,RegisterForm
 from django.core.mail import EmailMultiAlternatives # Enviamos HTML
 from django.contrib.auth.models import User
 import django
@@ -11,8 +11,10 @@ from django.shortcuts import redirect
 # Paginacion en Django
 from django.core.paginator import Paginator,EmptyPage,InvalidPage
 from django.contrib.auth.decorators import login_required
+#from .forms import DivErrorList
+from OficinaVirtual.controller import setJs
 
-
+@login_required
 def index_view(request):
     if not request.user.is_authenticated():
         return redirect('/login/?next=%s' % request.path)
